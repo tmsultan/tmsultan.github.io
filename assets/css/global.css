@@ -58,64 +58,79 @@ img.lazy, div.lazy {
 
 /* 🌙 Dark Mode - General */
 .dark-mode {
-    background-color: #181818 !important; /* Slightly lighter background */
+    background-color: #181818 !important;
     color: #e0e0e0 !important;
 }
 
-/* 🌙 Dark Mode - Cards with Visible Background Between Them */
+/* 🌙 Dark Mode - News Section */
+.dark-mode .my-3.bg-white.shadow-sm.rounded-sm {
+    background: #1a1a1a !important;
+    color: #e0e0e0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0) !important;
+}
+
+
+
+.dark-mode .border-bottom.border-gray,
+.dark-mode .border-top.border-gray {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark-mode .media {
+    background: #1a1a1a !important;
+    color: #e0e0e0 !important;
+}
+
+.dark-mode .media-body {
+    background: transparent !important;
+}
+
+/* 🌙 Dark Mode - Publications Section */
+.dark-mode .px-3.pb-1 {
+    background: #1a1a1a !important;
+}
+
+.dark-mode .p-3.mb-0.border-bottom {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* 🌙 Dark Mode - Item Cards */
+.dark-mode .row.no-gutters {
+    background: #1a1a1a !important;
+    color: #e0e0e0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark-mode .col-md-3.col-xl-2.mb-md-0.p-md-3 {
+    background: transparent !important;
+}
+
+.dark-mode .col-md-9.col-xl-10.p-3.pl-md-0 {
+    background: #1a1a1a !important;
+}
+
+/* 🌙 Dark Mode - Small Text, Abstract, and Links */
+.dark-mode .text-muted {
+    color: #bbbbbb !important;
+}
+
+.dark-mode .small.text-muted {
+    color: #bbbbbb !important;
+}
+
+/* 🌙 Dark Mode - Card Elements */
 .dark-mode .card {
-    background: #1a1a1a !important; /* Foreground card color */
+    background: linear-gradient(145deg, #222, #181818) !important;
     color: #e0e0e0 !important;
-    border: 1px solid rgba(255, 255, 255, 0.08) !important; /* Softer border */
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4) !important; /* 3D effect */
+    border: 5px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 1px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(10px);
 }
 
-/* 🌙 Ensuring Background is Visible Between Cards */
-.dark-mode .card-container {
-    background: #181818 !important; /* Matches the main background */
-    padding: 8px; /* Creates a visible separation */
-    border-radius: 10px; /* Softens the background shape */
-}
-
-/* 🌙 Add Spacing Inside Containers But NOT Between Cards */
-.dark-mode .card + .card {
-    margin-top: 8px; /* Small gap to show the background */
-}
-
-/* 🌙 Navbar */
-.dark-mode .navbar {
-    background-color: #222 !important;
-    border-bottom: 1px solid #444;
-}
-
-.dark-mode .navbar a,
-.dark-mode .navbar .nav-link {
-    color: #e0e0e0 !important;
-}
-
-.dark-mode .navbar a:hover {
-    color: #bb86fc !important;
-}
-
-/* 🌙 Footer */
-.dark-mode .footer {
-    background-color: #1e1e1e !important;
-    color: #e0e0e0 !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
-}
-
-/* 🌙 Links */
-.dark-mode a {
-    color: #bb86fc !important;
-}
-
-.dark-mode a:hover {
-    color: #ff79c6 !important;
-}
-
-/* 🌙 Buttons */
+/* 🌙 Dark Mode - Button Styles */
 .dark-mode .btn-primary {
     background-color: #bb86fc !important;
     border-color: #bb86fc !important;
@@ -126,7 +141,19 @@ img.lazy, div.lazy {
     border-color: #ff79c6 !important;
 }
 
-/* 🌙 Ensure Dark Mode Applies to All Containers */
+.dark-mode .card .btn {
+    background: #bb86fc !important;
+    color: #181818 !important;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(187, 134, 252, 0.5);
+}
+
+.dark-mode .card .btn:hover {
+    background: #ff79c6 !important;
+    box-shadow: 0 0 15px rgba(255, 121, 198, 0.7);
+}
+
+/* 🌙 Dark Mode - Ensure Background for All Containers */
 .dark-mode .container,
 .dark-mode .row,
 .dark-mode .col-md-6,
@@ -142,63 +169,48 @@ img.lazy, div.lazy {
     color: #e0e0e0 !important;
 }
 
+/* 🌙 Dark Mode - Borders and Separators */
+.dark-mode .border-gray {
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
 
 /* 🌙 Dark Mode - Light Mode Toggle Button */
 .dark-mode #dark-mode-toggle {
-    color: #ffffff !important; /* Makes text fully visible */
-    background-color: #333 !important; /* Slight contrast for visibility */
+    color: #ffffff !important;
+    background-color: #333 !important;
     border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
-/* 🌙 Hover Effect - Light Mode Button */
 .dark-mode #dark-mode-toggle:hover {
     background-color: #444 !important;
-    color: #ffcc66 !important; /* Soft yellow tint for a warm contrast */
+    color: #ffcc66 !important;
 }
 
-.dark-mode .card {
-    background: linear-gradient(145deg, #222, #181818) !important; /* Gradient background */
-    color: #e0e0e0 !important;
-    border: 5px solid rgba(255, 255, 255, 0.1) !important;
-    padding: 1px;
-    border-radius: 12px;
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5) !important; /* Stronger shadow for depth */
-    backdrop-filter: blur(10px); /* Soft glass effect */
+.dark-mode .navbar {
+    background-color: #282828 !important; /* Slightly lighter dark gray */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
 
-.dark-mode .card:hover {
-    transform: scale(1.02); /* Slight zoom on hover */
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6) !important;
-    transition: all 0.3s ease-in-out;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+.dark-mode .navbar a,
+.dark-mode .navbar .nav-link {
+    color: #e0e0e0 !important; /* Restores light text color */
 }
 
-.dark-mode .card .btn {
-    background: #bb86fc !important;
-    color: #181818 !important;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(187, 134, 252, 0.5);
+.dark-mode .navbar a:hover {
+    color: #bb86fc !important; /* Previous purple hover color */
 }
 
-.dark-mode .card .btn:hover {
-    background: #ff79c6 !important;
-    box-shadow: 0 0 15px rgba(255, 121, 198, 0.7);
+.dark-mode .navbar .nav-link.active,
+.dark-mode .navbar .nav-item.active > a {
+    font-weight: bold !important;
+    color: #ffffff !important; /* Ensure max contrast */
 }
 
-.dark-mode .card-container {
-    padding: 12px; /* More separation */
-    border-radius: 12px;
+
+.dark-mode a {
+    color: #bb86fc !important; /* Restores purple links */
 }
 
-.dark-mode .card + .card {
-    margin-top: 12px; /* More breathing room */
-}
-
-.dark-mode .my-3.p-0.bg-white.shadow-sm.rounded-sm {
-    background: #1a1a1a !important; /* Dark background */
-    color: #e0e0e0 !important; /* Light text */
-    border: 1px solid rgba(255, 255, 255, 0.08) !important; /* Subtle border */
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4) !important; /* Add depth */
+.dark-mode a:hover {
+    color: #ff79c6 !important; /* Soft pink for hover */
 }
