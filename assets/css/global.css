@@ -1,21 +1,18 @@
 @charset "utf-8";
+
+/* 🌍 General Styles */
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     padding-top: 5.0rem;
 }
 
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
-.text-profile-position {
-    font-weight: 400;
-}
-
+.text-profile-position,
 .text-profile-bio {
-    /* font-family: "Raleway"; */
     font-weight: 400;
 }
 
@@ -27,7 +24,6 @@ h1, h2, h3, h4, h5, h6,
     height: 16px;
     vertical-align: -10%;
     margin-right: 2px;
-    line-break: unset;
 }
 
 .no-break {
@@ -43,18 +39,11 @@ h1, h2, h3, h4, h5, h6,
     min-height: 100px;
 }
 
-img.lazy {
+/* Lazy Loading Placeholder */
+img.lazy, div.lazy {
     background-image: url('images/loading.gif');
     background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 50px 50px;
-    min-height: 80px;
-}
-
-div.lazy {
-    background-image: url('images/loading.gif');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
+    background-position: center;
     background-size: 50px 50px;
     min-height: 80px;
 }
@@ -67,3 +56,149 @@ div.lazy {
     font-family: Courier, monospace;
 }
 
+/* 🌙 Dark Mode - General */
+.dark-mode {
+    background-color: #181818 !important; /* Slightly lighter background */
+    color: #e0e0e0 !important;
+}
+
+/* 🌙 Dark Mode - Cards with Visible Background Between Them */
+.dark-mode .card {
+    background: #1a1a1a !important; /* Foreground card color */
+    color: #e0e0e0 !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important; /* Softer border */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4) !important; /* 3D effect */
+}
+
+/* 🌙 Ensuring Background is Visible Between Cards */
+.dark-mode .card-container {
+    background: #181818 !important; /* Matches the main background */
+    padding: 8px; /* Creates a visible separation */
+    border-radius: 10px; /* Softens the background shape */
+}
+
+/* 🌙 Add Spacing Inside Containers But NOT Between Cards */
+.dark-mode .card + .card {
+    margin-top: 8px; /* Small gap to show the background */
+}
+
+/* 🌙 Navbar */
+.dark-mode .navbar {
+    background-color: #222 !important;
+    border-bottom: 1px solid #444;
+}
+
+.dark-mode .navbar a,
+.dark-mode .navbar .nav-link {
+    color: #e0e0e0 !important;
+}
+
+.dark-mode .navbar a:hover {
+    color: #bb86fc !important;
+}
+
+/* 🌙 Footer */
+.dark-mode .footer {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+/* 🌙 Links */
+.dark-mode a {
+    color: #bb86fc !important;
+}
+
+.dark-mode a:hover {
+    color: #ff79c6 !important;
+}
+
+/* 🌙 Buttons */
+.dark-mode .btn-primary {
+    background-color: #bb86fc !important;
+    border-color: #bb86fc !important;
+}
+
+.dark-mode .btn-primary:hover {
+    background-color: #ff79c6 !important;
+    border-color: #ff79c6 !important;
+}
+
+/* 🌙 Ensure Dark Mode Applies to All Containers */
+.dark-mode .container,
+.dark-mode .row,
+.dark-mode .col-md-6,
+.dark-mode .col-lg-4,
+.dark-mode .jumbotron,
+.dark-mode .bg-light,
+.dark-mode .shadow-sm,
+.dark-mode .rounded-sm,
+.dark-mode section,
+.dark-mode div,
+.dark-mode article {
+    background-color: #181818 !important;
+    color: #e0e0e0 !important;
+}
+
+
+/* 🌙 Dark Mode - Light Mode Toggle Button */
+.dark-mode #dark-mode-toggle {
+    color: #ffffff !important; /* Makes text fully visible */
+    background-color: #333 !important; /* Slight contrast for visibility */
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+/* 🌙 Hover Effect - Light Mode Button */
+.dark-mode #dark-mode-toggle:hover {
+    background-color: #444 !important;
+    color: #ffcc66 !important; /* Soft yellow tint for a warm contrast */
+}
+
+.dark-mode .card {
+    background: linear-gradient(145deg, #222, #181818) !important; /* Gradient background */
+    color: #e0e0e0 !important;
+    border: 5px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 1px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5) !important; /* Stronger shadow for depth */
+    backdrop-filter: blur(10px); /* Soft glass effect */
+}
+
+.dark-mode .card:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6) !important;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.dark-mode .card .btn {
+    background: #bb86fc !important;
+    color: #181818 !important;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(187, 134, 252, 0.5);
+}
+
+.dark-mode .card .btn:hover {
+    background: #ff79c6 !important;
+    box-shadow: 0 0 15px rgba(255, 121, 198, 0.7);
+}
+
+.dark-mode .card-container {
+    padding: 12px; /* More separation */
+    border-radius: 12px;
+}
+
+.dark-mode .card + .card {
+    margin-top: 12px; /* More breathing room */
+}
+
+.dark-mode .my-3.p-0.bg-white.shadow-sm.rounded-sm {
+    background: #1a1a1a !important; /* Dark background */
+    color: #e0e0e0 !important; /* Light text */
+    border: 1px solid rgba(255, 255, 255, 0.08) !important; /* Subtle border */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4) !important; /* Add depth */
+}
