@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+    <header>
+        <h1>Test Publications</h1>
+    </header>
+
+    <main>
+        <article class="publication_Test">
+            <div class="publication_Test-content">
+                <!-- Fixed-Size Image on the Left -->
+                <img src="{{ page.image }}" alt="Publication Image" class="publication_Test-img">
+
+                <!-- Text Content -->
+                <div class="publication_Test-details">
+                    <h2>{{ page.title }}</h2>
+
+                    <!-- Journal/Conference Section -->
+                    {% if page.journal_name or page.conference_name %}
+                    <p class="publication_meta">
+                        {% if page.journal_name %}
+                        <span class="journal_name"><em>{{ page.journal_name }}</em></span><br>
+                        {% endif %}
+                        {% if page.conference_name %}
+                        <span class="conference_name"><em>{{ page.conference_name }}</em></span>
+                        {% endif %}
+                    </p>
+                    {% endif %}
+
+                    <p class="publication_authors"><strong>Authors:</strong> {{ page.authors }}</p>
+                    <p>{{ page.description }}</p>
+
+                    <div class="buttons">
+                        {% if page.preprint_link %}
+                        <a href="{{ page.preprint_link }}" class="btn" target="_blank">📄 Preprint</a>
+                        {% elsif page.paper_link %}
+                        <a href="{{ page.paper_link }}" class="btn" target="_blank">📄 Paper</a>
+                        {% endif %}
+
+                        {% if page.video_link %}
+                        <a href="{{ page.video_link }}" class="btn" target="_blank">📹 Video</a>
+                        {% endif %}
+
+                        {% if page.webpage_link %}
+                        <a href="{{ page.webpage_link }}" class="btn" target="_blank">🌐 Webpage</a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <p>© 2025 My Website</p>
+    </footer>
+
+    <style>
+        /* Light Mode Default */
+        .publication_Test {
+            max-width: 850px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 12px; /* Rounded corners */
+            background: #f7f7f7;  /* Soft white-gray */
+            border: 1px solid #d1d1d1; /* Subtle light gray border */
+            display: flex;
+            align-items: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Soft shadow */
+            transition: box-shadow 0.3s ease-in-out;
+        }
+        .publication_Test:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12); /* Slightly stronger hover shadow */
+        }
+        .publication_Test-content {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .publication_Test-img {
+            width: 150px;  /* Fixed width */
+            height: 200px; /* Fixed height */
+            object-fit: cover; /* Ensures the image fills the space */
+            border-radius: 10px;
+            border: 1px solid #b0b0b0; /* Soft gray border */
+        }
+        .publication_Test-details {
+            flex-grow: 1;
+            color: #333333; /* Dark gray text */
+        }
+        .publication_meta {
+            font-size: 0.9rem;
+            color: #6c757d; /* Muted gray */
+            margin-bottom: 8px;
+        }
+        .publication_authors {
+            font-size: 0.95rem;
+            color: #444444; /* Slightly darker gray */
+        }
+        .journal_name, .conference_name {
+            display: block;
+            font-style: italic;
+        }
+        .buttons {
+            margin-top: 10px;
+        }
+        .btn {
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 8px; /* Rounded buttons */
+            background: #6c757d; /* Muted gray */
+            color: white;
+            margin-right: 10px;
+            display: inline-block;
+            transition: 0.3s ease-in-out;
+        }
+        .btn:hover {
+            background: #5a6268; /* Darker hover effect */
+        }
+
+        /* Dark Mode Adjustments */
+        @media (prefers-color-scheme: dark) {
+            .publication_Test {
+                background: #1e1e1e; /* Modern dark gray */
+                border: 1px solid #444444; /* Subtle border */
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Softer dark mode shadow */
+            }
+            .publication_Test-details {
+                color: #b0b0b0; /* Soft gray text */
+            }
+            .publication_meta {
+                color: #b0b0b0; /* Muted gray for journal/conference */
+            }
+            .publication_authors {
+                color: #b0b0b0; /* Soft gray for authors */
+            }
+            .publication_Test-img {
+                border: 1px solid #666666; /* Darker border */
+            }
+            h1, h2 {
+                color: #ffffff; /* White for headings */
+            }
+            .btn {
+                background: #686868; /* Neutral gray button */
+            }
+            .btn:hover {
+                background: #505050; /* Darker hover effect */
+            }
+        }
+    </style>
+</body>
+</html>

@@ -3,9 +3,9 @@ secondary_name: ""
 navbar_name: "Talha Sultan"
 
 positions:
-- logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
-  name: Position 1 with logo
-- name: Position 2 without logo
+  - name: Ph.D. Student at UW Madison
+[//]: #- logo: /assets/images/badges/MIT_Social_circle.png  # Logo is optional
+[//]: #  name: Position 1 with logo
 
 
 email: "tsultan@wisc.edu"
@@ -34,17 +34,23 @@ portrait_url: /assets/images/photos/portrait.jpg
 portrait_caption: >-
   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
+
 education:
-- name: Massachusetts Institute of Technology
-  logo: /assets/images/badges/MIT_Social_circle.png
+- name: University of Wisconsin - Madison
+  logo: /assets/images/badges/uw_crest.png
   position: >-
-    Department of Electrical Engineering and Computer Science <br/>
+    Department of Electrical and Computer Engineering <br/>
     Ph.D. Student
-  date: Sep. 2024 - present
-- name: Peking University
-  logo: /assets/images/badges/PKU_red.png
-  position: B.S. in Computer Science
-  date: Sep. 2019 - Jul. 2021
+  date: 2020 - present
+- name: University of Wisconsin - Madison
+  logo: /assets/images/badges/uw_crest.png
+  position: >-
+    Masters in Electrical Engineering
+  date: 2020
+- name: University of Wisconsin - Madison
+  logo: /assets/images/badges/Bucky.png
+  position: B.S. in Chemical Engineering and Math <br/> Certificate in Computer Science
+  date: 2018
 
 # experience:
 # - name: Peking University
