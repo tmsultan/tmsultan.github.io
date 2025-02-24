@@ -280,3 +280,12 @@ img.lazy, div.lazy {
         transform: scale(1.2);
     }
 }
+
+.dark-mode span.text-body {
+    color: #888888 !important; /* Lighter gray for dark mode */
+}
+
+.dark-mode strong {
+    font-weight: bold !important; /* Ensures text is actually bold */
+    filter: brightness(1.5); /* Slightly lighter than the normal text */
+}
