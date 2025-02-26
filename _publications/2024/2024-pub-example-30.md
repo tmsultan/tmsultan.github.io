@@ -1,22 +1,22 @@
 ---
-title:          "Convallis a cras semper auctor neque vitae rutrum quisque non tellus orci ac"
-date:           2024-05-12 00:01:00 +0800
-selected:       true
-pub:            "International Conference on Machine Learning (ICML)"
+title:          "Towards a more accurate light transport model for non-line-of-sight imaging"
+date:           2024-02-12 00:01:00 +0800
+selected:       false
+pub:            "Optics Express"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
 pub_last:       ' <span class="badge badge-pill badge-publication badge-success">Spotlight</span>'
 pub_date:       "2024"
 
 abstract: >-
-  Photo by Pineapple Supply Co. on Unsplash. Please put a tldr (too-long-didnt-read, 1~2 sentences) of your publication here. It is not recommended to put the actual abstract here because it is usually too long to fit in. $\LaTeX$ is supported. $a=b+c$.
+  We present a graphical representation of the two-frequency spatial Wigner distribution (TFSWD) forward model, which integrates multiple NLOS imaging modalities. Through experimental validation, we demonstrate that the model more accurately captures light transport and wave propagation, paving the way for future improvements in reconstruction
 cover:          /assets/images/covers/cover3.jpg
 authors:
-  - Your Name
-  - James Wang
-  - Some Other Name
-  - John Doe
+  - TS
+  - SAR
+  - AV
 links:
-  Code: https://github.com/luost26/academic-homepage
+  Code: https://github.com/tmsultan/2023_NLOS_Light_Transport_TFSWD
+  Paper: https://doi.org/10.1364/OE.508034
   Unsplash: https://unsplash.com/photos/sliced-in-half-pineapple--_PLJZmHZzk
 ---

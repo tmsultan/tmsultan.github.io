@@ -1,22 +1,71 @@
-"Your Name":
+
+
+
+"TS":
+  name: Talha Sultan
   bold: true
 
-"Robert White":
-  url: https://www.google.com/?q=Robert+White
+"AV":
+  name: Andreas Velten
+  url: https://biostat.wisc.edu/~velten/
 
-"Charles Green (MIT)":
-  name: Charles Green
-  url: https://www.google.com/?q=Charles+Green+MIT
+"XL":
+  name: Xioachun Liu
+  url: https://xiaochunliu.github.io/
 
-"Charles Green (Stanford)":
-  name: Charles Green
-  url: https://www.google.com/?q=Charles+Green+Stanford
+"AB":
+  name: Alex Bocchieri
+  url: https://bocchs.github.io/
 
-"Garrett Harris":
-  url: https://www.google.com/?q=Garrett+Harris
+"SAR":
+  name: Syed Azer Reza
+  url: https://wordpress.rose-hulman.edu/reza/about-the-lab/
 
-"James Wang":
+"Chaoying Gu":
+  url: https://arianagu.github.io/
+
+"KM":
+  name: Khadijeh Masumnia-Bisheh
+
+"Laura Waller":
+  name: Laura Waller
+  url: https://www.laurawaller.com/
+
+
+"f1":
+  name: James Wang
   url: https://www.google.com/?q=James+Wang
 
 "John Doe":
   url: https://www.google.com/?q=John+Doe
+
+"DR":
+  name: Diego Royo
+  url: https://diego.contact/
+
+"AM":
+  name: Adolfo Muñoz
+  url: https://webdiis.unizar.es/~amunoz/en/
+
+"DG":
+  name: Diego Gutierrez
+  url: http://giga.cps.unizar.es/~diegog/
+
+"JM":
+  name: Julio Marco
+  url: https://webdiis.unizar.es/~juliom/
+
+
+"EB":
+  name: Eric Brandt
+
+"PP":
+  name: Pavel Polynkin
+  url: https://www.optics.arizona.edu/person/pavel-polynkin
+
+"SR":
+  name: Simone Riccardo
+
+"AT":
+  name: Alberto Tosi
+  url: https://www.deib.polimi.it/eng/people/details/386334

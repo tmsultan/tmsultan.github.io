@@ -1,6 +1,6 @@
 ---
-title:          "Iterating the Transient Light Transport Matrix for Non-Line-of-Sight Imaging"
-date:           2024-11-12 00:01:00 +0800
+title:          "Optimized Sampling for Non-Line-of-Sight Imaging Using Modified Fast Fourier Transforms"
+date:           2025-01-15 00:01:00 +0800
 selected:       true
 # pub:            "International Conference on Machine Learning (ICML)"
 # pub_pre:        "Submitted to "
@@ -13,14 +13,12 @@ abstract: >-
 cover:          /assets/images/covers/cover3.jpg
 authors:
   - TS
-  - EB
-  - KM
-  - SR
+  - AB
+  - Chaoying Gu
+  - XL
   - PP
-  - AT
   - AV
 links:
-  Preprint: https://arxiv.org/pdf/2412.10300
-  Code: https://github.com/luost26/academic-homepage
+  Preprint: https://arxiv.org/pdf/2501.05244
   Unsplash: https://unsplash.com/photos/sliced-in-half-pineapple--_PLJZmHZzk
 ---

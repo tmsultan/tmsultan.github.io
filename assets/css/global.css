@@ -282,10 +282,11 @@ img.lazy, div.lazy {
 }
 
 .dark-mode span.text-body {
-    color: #888888 !important; /* Lighter gray for dark mode */
+    color: #aaaaaa !important; /* Lighter gray for dark mode */
 }
 
 .dark-mode strong {
-    font-weight: bold !important; /* Ensures text is actually bold */
-    filter: brightness(1.5); /* Slightly lighter than the normal text */
+    font-weight: bold !important; /* Ensures bold text */
+    filter: brightness(1.2); /* Slightly lighter for better readability */
+    text-decoration: underline !important; /* Underlines bold text */
 }
