@@ -290,3 +290,8 @@ img.lazy, div.lazy {
     filter: brightness(1.2); /* Slightly lighter for better readability */
     text-decoration: underline !important; /* Underlines bold text */
 }
+
+
+body {
+    font-size: 100%;
+}
