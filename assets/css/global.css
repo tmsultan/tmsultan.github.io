@@ -116,8 +116,16 @@ img.lazy, div.lazy {
 }
 
 .dark-mode .small.text-muted {
+    font-size: 1rem !important;
     color: #bbbbbb !important;
 }
+
+.dark-mode .small.text-muted {
+    font-size: 1rem !important;
+    color: #cccccc !important; /* Lighter gray */
+}
+
+
 
 /* 🌙 Dark Mode - Card Elements */
 .dark-mode .card {
@@ -291,7 +299,21 @@ img.lazy, div.lazy {
     text-decoration: underline !important; /* Underlines bold text */
 }
 
-
 body {
-    font-size: 100%;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem; /* Ensures consistent base size */
+    padding-top: 5.0rem;
+}
+
+h1 {
+    font-size: clamp(1.8rem, 3vw, 3rem); /* Ensures good scaling */
+}
+
+h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+p {
+    font-size: clamp(1rem, 1.2vw, 1.25rem);
 }

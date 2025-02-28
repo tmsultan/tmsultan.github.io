@@ -9,6 +9,7 @@ pub_post:       'Under review.'
 # pub_date:       "2024"
 
 abstract: >-
+  We employ  a multipixel SPAD array to capture additional dimensions of the available measurement space in Non-Line-of-Sight Imaging. This extra information is processed with novel computational methods to extract the transient light transport from surfaces hidden "around the corner"
 
 cover:          /assets/images/covers/2024_TLTM.png
 authors:
