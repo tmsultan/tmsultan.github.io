@@ -1,7 +1,7 @@
 ---
 title:          "Fast Non-Line-of-sight Imaging with Non-planar Relay Surfaces"
 date:           2023-01-05 00:01:00 +0800
-selected:       true
+selected:       false
 pub:            "ICCP"
 pub_date:       "2023"
 abstract: >-
