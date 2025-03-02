@@ -8,7 +8,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/luost26/academic-homepage)](https://github.com/luost26/academic-homepage)
 [![GitHub forks](https://img.shields.io/github/forks/luost26/academic-homepage)](https://github.com/luost26/academic-homepage/forks)
 
-This repository contains my personal [website](https://tmsultan.github.io/), based on a [GitHub](https://github.com/luost26/academic-homepage/) Pages (Jekyll) [template](https://luost.me/academic-homepage/) provided by [🏡](https://luost.me/) and modifications provided by other (creators)[https://github.com/WangRongsheng/WangRongsheng.github.io]. I have added my own modifications. Please feel to use them, but make sure to credit the [original creator](https://luost.me/).
+This repository contains my personal [website](https://tmsultan.github.io/), based on a [GitHub](https://github.com/luost26/academic-homepage/) Pages (Jekyll) [template](https://luost.me/academic-homepage/) provided by [🏡](https://luost.me/) and [:star:](https://github.com/WangRongsheng/WangRongsheng.github.io). I have added my own modifications. Please feel to use them, but make sure to credit the [original creator](https://luost.me/).
 
 
 ## Getting Started
