@@ -108,6 +108,9 @@ navbar_title: Home
 
         // Ensure Night Mode updates instantly when toggled
         document.addEventListener("DOMContentLoaded", function () {
+            d.c = getNightModeColor(); // Ensure correct color is set at the start
+            restartAnimation(); // Force a redraw on page load
+
             let toggleButton = document.getElementById("dark-mode-toggle");
             if (toggleButton) {
                 toggleButton.addEventListener("click", function () {
