@@ -30,26 +30,57 @@ navbar_title: Home
 {% endif %}
 
 
+
 <!-- Background Animation Script -->
 <script>
-    !function() {
+    (function () {
         function n(n, e, t) { return n.getAttribute(e) || t }
         function e(n) { return document.getElementsByTagName(n) }
         function t() {
             var t = e("script"), o = t.length, i = t[o - 1];
-            return { l: o, z: n(i, "zIndex", -1), o: n(i, "opacity", .5), c: n(i, "color", "0,0,0"), n: n(i, "count", 99) }
+            return {
+                l: o,
+                z: n(i, "zIndex", -1),
+                o: n(i, "opacity", 0.5),
+                c: getNightModeColor(),
+                n: n(i, "count", 99)
+            }
         }
-        function o() { a = m.width = window.innerWidth, c = m.height = window.innerHeight }
+
+        // Detect Night Mode from localStorage
+        function isNightMode() {
+            return localStorage.getItem("dark-mode") === "enabled";
+        }
+
+        // Get correct color based on mode
+        function getNightModeColor() {
+            return isNightMode() ? "0, 0, 0" : "255, 255, 255"; // White for dark mode, Black for light mode
+        }
+
+        function o() {
+            a = m.width = window.innerWidth;
+            c = m.height = window.innerHeight;
+        }
+
         function i() {
             r.clearRect(0, 0, a, c);
             var n, e, t, o, m, l;
             s.forEach(function(i, x) {
-                for (i.x += i.xa, i.y += i.ya, i.xa *= i.x > a || i.x < 0 ? -1 : 1, i.ya *= i.y > c || i.y < 0 ? -1 : 1, r.fillRect(i.x - .5, i.y - .5, 1, 1), e = x + 1; e < u.length; e++)
-                n = u[e], null !== n.x && null !== n.y && (o = i.x - n.x, m = i.y - n.y, l = o * o + m * m, l < n.max && (n === y && l >= n.max / 2 && (i.x -= .03 * o, i.y -= .03 * m),
-                t = (n.max - l) / n.max, r.beginPath(), r.lineWidth = t / 2, r.strokeStyle = "rgba(" + d.c + "," + (t + .2) + ")", r.moveTo(i.x, i.y), r.lineTo(n.x, n.y), r.stroke()))
+                for (i.x += i.xa, i.y += i.ya,
+                     i.xa *= i.x > a || i.x < 0 ? -1 : 1,
+                     i.ya *= i.y > c || i.y < 0 ? -1 : 1,
+                     r.fillRect(i.x - .5, i.y - .5, 1, 1),
+                     e = x + 1; e < u.length; e++)
+                n = u[e], null !== n.x && null !== n.y && (o = i.x - n.x, m = i.y - n.y, l = o * o + m * m,
+                l < n.max && (n === y && l >= n.max / 2 && (i.x -= .03 * o, i.y -= .03 * m),
+                t = (n.max - l) / n.max, r.beginPath(),
+                r.lineWidth = t/1.5, // Ensures fixed 3px line width
+                r.strokeStyle = "rgba(" + d.c + "," + (t + 0.2) + ")",
+                r.moveTo(i.x, i.y), r.lineTo(n.x, n.y), r.stroke()))
             }),
             x(i)
         }
+
         var a, c, u, m = document.createElement("canvas"),
         d = t(), l = "c_n" + d.l, r = m.getContext("2d"),
         x = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame ||
@@ -61,10 +92,35 @@ navbar_title: Home
         window.onmousemove = function(n) { n = n || window.event, y.x = n.clientX, y.y = n.clientY },
         window.onmouseout = function() { y.x = null, y.y = null };
 
+        // Set speed factor (lower value = slower animation)
+        const SPEED_FACTOR = 0.3; // **Adjust this value to slow down animation**
+
         for (var s = [], f = 0; d.n > f; f++) {
-            var h = w() * a, g = w() * c, v = 2 * w() - 1, p = 2 * w() - 1;
-            s.push({ x: h, y: g, xa: v, ya: p, max: 6e3 });
+            var h = w() * a,
+                g = w() * c,
+                v = (2 * w() - 1) * SPEED_FACTOR, // Reduced speed
+                p = (2 * w() - 1) * SPEED_FACTOR; // Reduced speed
+            s.push({ x: h, y: g, xa: v, ya: p, max: isNightMode() ? 10000 : 6000 });
         }
+
         u = s.concat([y]), setTimeout(function() { i() }, 100);
-    }();
+        window.requestAnimationFrame(n);
+
+        // Ensure Night Mode updates instantly when toggled
+        document.addEventListener("DOMContentLoaded", function () {
+            let toggleButton = document.getElementById("dark-mode-toggle");
+            if (toggleButton) {
+                toggleButton.addEventListener("click", function () {
+                    localStorage.setItem("dark-mode", isNightMode() ? "disabled" : "enabled");
+                    restartAnimation();
+                });
+            }
+        });
+
+        function restartAnimation() {
+            r.clearRect(0, 0, a, c);
+            d.c = getNightModeColor(); // Update color
+            i(); // Restart animation
+        }
+    })();
 </script>
