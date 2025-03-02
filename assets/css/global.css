@@ -295,8 +295,8 @@ img.lazy, div.lazy {
 
 .dark-mode strong {
     font-weight: bold !important; /* Ensures bold text */
-    filter: brightness(1.2); /* Slightly lighter for better readability */
-    text-decoration: underline !important; /* Underlines bold text */
+    filter: brightness(1.5); /* Slightly lighter for better readability */
+   /* text-decoration: underline !important; /* Underlines bold text */
 }
 
 body {
@@ -318,6 +318,8 @@ p {
     font-size: clamp(1rem, 1.2vw, 1.25rem);
 }
 
+
+
 .clustrmaps-container {
     width: 150px;
     height: 150px;
@@ -328,6 +330,7 @@ p {
     justify-content: center;
 }
 
+/* Ensure visibility in both modes */
 #clstr_globe {
     transform: scale(0.6);
     transform-origin: center;

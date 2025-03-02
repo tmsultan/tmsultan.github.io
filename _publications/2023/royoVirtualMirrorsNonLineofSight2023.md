@@ -1,7 +1,7 @@
 ---
 title:          "Virtual Mirrors: Non-Line-of-Sight Imaging Beyond the Third Bounce"
 date:           2023-07-21 00:01:00 +0800
-selected:       false
+selected:       true
 pub:            "SIGGRAPH"
 pub_date:       "2023"
 abstract: >-
