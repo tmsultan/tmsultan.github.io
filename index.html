@@ -54,7 +54,7 @@ navbar_title: Home
 
         // Get correct color based on mode
         function getNightModeColor() {
-            return isNightMode() ? "0, 0, 0" : "255, 255, 255"; // White for dark mode, Black for light mode
+          return isNightMode() ? "0, 0, 0" : "255, 255, 255"; // White for dark mode, Black for light mode
         }
 
         function o() {
@@ -108,6 +108,7 @@ navbar_title: Home
 
         // Ensure Night Mode updates instantly when toggled
         document.addEventListener("DOMContentLoaded", function () {
+
             d.c = getNightModeColor(); // Ensure correct color is set at the start
             restartAnimation(); // Force a redraw on page load
 
