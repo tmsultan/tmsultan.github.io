@@ -23,6 +23,6 @@ function attachDarkModeToggle() {
 }
 
 // Ensure the function runs on page load
-document.addEventListener("DOMContentLoaded", function () {
-    attachDarkModeToggle();
+//document.addEventListener("DOMContentLoaded", function () {
+//    attachDarkModeToggle();
 });

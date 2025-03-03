@@ -80,20 +80,26 @@
     window.onmouseout = function() { y.x = null; y.y = null; };
 
     const SPEED_FACTOR = 0.3;
-    for (var f = 0; f < d.n; f++) {
-        var h = w() * a,
-            g = w() * c,
-            v = (2 * w() - 1) * SPEED_FACTOR,
-            p = (2 * w() - 1) * SPEED_FACTOR;
-        s.push({ x: h, y: g, xa: v, ya: p, max: isNightMode() ? 10000 : 6000 });
+    function createParticles() {
+        s = [];
+        for (var f = 0; f < d.n; f++) {
+            var h = w() * a,
+                g = w() * c,
+                v = (2 * w() - 1) * SPEED_FACTOR,
+                p = (2 * w() - 1) * SPEED_FACTOR;
+            s.push({ x: h, y: g, xa: v, ya: p, max: isNightMode() ? 10000 : 6000 });
+        }
+        u = s.concat([y]);
     }
-    u = s.concat([y]);
+
+    createParticles();
     setTimeout(i, 100);
     window.requestAnimationFrame(i);
 
     function updateBackgroundAnimation() {
         d.c = getNightModeColor();
         r.clearRect(0, 0, a, c);
+        createParticles(); // Reset particles with the new color
     }
 
     function attachToggle() {
@@ -122,10 +128,22 @@
         startAnimation();
     });
 
+
     // Ensure dark mode toggle updates animation
-    if (document.readyState === "complete" || document.readyState === "interactive") {
-        attachToggle();
-    } else {
-        document.addEventListener("DOMContentLoaded", attachToggle);
-    }
+    //if (document.readyState === "complete" || document.readyState === "interactive") {
+    //    attachToggle();
+    //} else {
+    //    document.addEventListener("DOMContentLoaded", attachToggle);
+    //}
+
+    // Update animation color when dark mode is toggled
+    document.addEventListener("DOMContentLoaded", function () {
+        if (document.getElementById("dark-mode-toggle")) {
+            document.getElementById("dark-mode-toggle").addEventListener("click", function () {
+                setTimeout(updateBackgroundAnimation, 100);
+            });
+        }
+    });
+
+
 })();
