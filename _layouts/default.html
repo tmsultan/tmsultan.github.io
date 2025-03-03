@@ -21,11 +21,29 @@
 document.addEventListener("DOMContentLoaded", function() {
     const toggleButton = document.getElementById("dark-mode-toggle");
     const body = document.body;
+    const profileImg = document.getElementById("profile-img");
+    const profileSourceDark = document.getElementById("profile-source-dark");
+    const profileSourceLight = document.getElementById("profile-source-light");
 
-    // Check local storage for user preference
+    function updateProfilePicture() {
+        if (!profileImg || !profileSourceDark || !profileSourceLight) return;
+
+        if (body.classList.contains("dark-mode")) {
+            profileImg.src = "{{ site.data.profile.portrait_url_dark | relative_url }}";
+            profileSourceDark.srcset = "{{ site.data.profile.portrait_url_dark | relative_url }}";
+            profileSourceLight.srcset = "";
+        } else {
+            profileImg.src = "{{ site.data.profile.portrait_url_light | relative_url }}";
+            profileSourceLight.srcset = "{{ site.data.profile.portrait_url_light | relative_url }}";
+            profileSourceDark.srcset = "";
+        }
+    }
+
+    // Apply stored dark mode setting on page load
     if (localStorage.getItem("dark-mode") === "enabled") {
         body.classList.add("dark-mode");
         toggleButton.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+        updateProfilePicture();
     }
 
     // Toggle dark mode on button click
@@ -39,9 +57,16 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.setItem("dark-mode", "disabled");
             toggleButton.innerHTML = '<i class="fas fa-moon"></i> Night Mode';
         }
+
+        updateProfilePicture(); // Ensure profile image switches
     });
+
+    // Detect system theme change and update picture
+    window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateProfilePicture);
 });
 </script>
+
+
 
 
 
