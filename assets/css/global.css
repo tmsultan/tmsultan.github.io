@@ -70,8 +70,6 @@ img.lazy, div.lazy {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0) !important;
 }
 
-
-
 .dark-mode .border-bottom.border-gray,
 .dark-mode .border-top.border-gray {
     border-color: rgba(255, 255, 255, 0.1) !important;
@@ -328,10 +326,56 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative; /* Ensures both elements stay in place */
 }
 
-/* Ensure visibility in both modes */
-#clstr_globe {
+/* Force proper visibility only in dark mode */
+body.dark-mode .clustrmaps-container {
+    background-color: #222222 !important; /* Dark mode background */
+}
+
+/* Ensure ClustrMaps widget does not become invisible */
+body.dark-mode #clustrmaps-dark iframe,
+body.dark-mode #clustrmaps-dark canvas,
+body.dark-mode #clustrmaps-dark svg {
+    background-color: #222222 !important; /* Set background explicitly */
+    color: #ffffff !important; /* Ensure land is visible */
+}
+
+/* Position both ClustrMaps scripts on top of each other */
+#clustrmaps-light, #clustrmaps-dark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s ease-in-out; /* Smooth fade transition */
+}
+
+/* Default: Light Mode Visible */
+#clustrmaps-light {
+    opacity: 1;
+    z-index: 2;
+}
+
+#clustrmaps-dark {
+    opacity: 0;
+    z-index: 1;
+}
+
+/* Toggle visibility when dark mode is on */
+body.dark-mode #clustrmaps-light {
+    opacity: 0;
+    z-index: 1;
+}
+
+body.dark-mode #clustrmaps-dark {
+    opacity: 1;
+    z-index: 2;
+}
+
+/* Scale ClustrMaps for better fit */
+#clstr_globe, #clustrmaps {
     transform: scale(0.6);
     transform-origin: center;
 }

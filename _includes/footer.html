@@ -14,44 +14,18 @@
         </div>
 
         <!-- ClustrMaps Visitor Tracker -->
-        <div class="clustrmaps-container" id="clustrmaps-container"></div>
+        <div class="clustrmaps-container">
+            <!-- Light Mode ClustrMaps -->
+            <div id="clustrmaps-light">
+                <script type="text/javascript" id="clstr_globe"
+                    src="https://clustrmaps.com/globe.js?d=HIPqhW-ZYzFpNlSvMArfRBt9uu4ZDyE2yGvMsRe-LMw">
+                </script>
+            </div>
 
+            <!-- Dark Mode ClustrMaps -->
+            <div id="clustrmaps-dark">
+                <a href="https://clustrmaps.com/site/1c4nj"  title="ClustrMaps"><img src="//www.clustrmaps.com/map_v2.png?d=HIPqhW-ZYzFpNlSvMArfRBt9uu4ZDyE2yGvMsRe-LMw&cl=ffffff" /></a>
+            </div>
+        </div>
     </div>
 </footer>
-
-<script>
-  function loadClustrMapsWidget() {
-    var container = document.getElementById("clustrmaps-container");
-    if (!container) return;
-
-    // Remove existing scripts if any
-    var existingLightScript = document.getElementById("clstr_globe");
-    var existingDarkScript = document.getElementById("clustrmaps");
-
-    if (existingLightScript) existingLightScript.remove();
-    if (existingDarkScript) existingDarkScript.remove();
-
-    // Create new script dynamically
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-
-    if (document.body.classList.contains("dark-mode")) {
-      script.id = "clustrmaps"; // Unique ID for dark mode
-      script.src = "https://clustrmaps.com/map_v2.js?d=HIPqhW-ZYzFpNlSvMArfRBt9uu4ZDyE2yGvMsRe-LMw&cl=ffffff&w=a"; // Dark mode script
-    } else {
-      script.id = "clstr_globe"; // Unique ID for light mode
-      script.src = "https://clustrmaps.com/globe.js?d=HIPqhW-ZYzFpNlSvMArfRBt9uu4ZDyE2yGvMsRe-LMw"; // Light mode script
-    }
-
-    // Append the new script
-    container.appendChild(script);
-  }
-
-  // Load ClustrMaps on initial page load
-  document.addEventListener("DOMContentLoaded", loadClustrMapsWidget);
-
-  // Update ClustrMaps when dark mode toggles
-  document.getElementById("dark-mode-toggle").addEventListener("click", function () {
-    setTimeout(loadClustrMapsWidget, 50); // Small delay to allow class toggle
-  });
-</script>
