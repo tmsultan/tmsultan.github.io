@@ -80,26 +80,20 @@
     window.onmouseout = function() { y.x = null; y.y = null; };
 
     const SPEED_FACTOR = 0.3;
-    function createParticles() {
-        s = [];
-        for (var f = 0; f < d.n; f++) {
-            var h = w() * a,
-                g = w() * c,
-                v = (2 * w() - 1) * SPEED_FACTOR,
-                p = (2 * w() - 1) * SPEED_FACTOR;
-            s.push({ x: h, y: g, xa: v, ya: p, max: isNightMode() ? 10000 : 6000 });
-        }
-        u = s.concat([y]);
+    for (var f = 0; f < d.n; f++) {
+        var h = w() * a,
+            g = w() * c,
+            v = (2 * w() - 1) * SPEED_FACTOR,
+            p = (2 * w() - 1) * SPEED_FACTOR;
+        s.push({ x: h, y: g, xa: v, ya: p, max: isNightMode() ? 10000 : 6000 });
     }
-
-    createParticles();
+    u = s.concat([y]);
     setTimeout(i, 100);
     window.requestAnimationFrame(i);
 
     function updateBackgroundAnimation() {
         d.c = getNightModeColor();
         r.clearRect(0, 0, a, c);
-        createParticles(); // Reset particles with the new color
     }
 
     function attachToggle() {
