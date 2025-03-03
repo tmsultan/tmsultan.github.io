@@ -35,7 +35,7 @@ function attachDarkModeToggle() {
     }
 
     updateToggleButtonText();
-    updateProfilePicture(); // ✅ Ensure correct image is set immediately
+    //updateProfilePicture(); // ✅ Ensure correct image is set immediately
 }
 
 function updateToggleButtonText() {
