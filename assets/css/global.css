@@ -379,3 +379,15 @@ body.dark-mode #clustrmaps-dark {
     transform: scale(0.6);
     transform-origin: center;
 }
+
+
+/* Default Light Mode */
+#profile-img {
+    height: 300px !important;
+    width: auto;
+}
+
+/* Debugging: Ensure Dark Mode CSS Applies */
+.dark-mode #profile-img {
+    height: 200px !important;
+}

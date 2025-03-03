@@ -28,23 +28,28 @@ document.addEventListener("DOMContentLoaded", function() {
     function updateProfilePicture() {
         if (!profileImg || !profileSourceDark || !profileSourceLight) return;
 
-        if (body.classList.contains("dark-mode")) {
-            profileImg.src = "{{ site.data.profile.portrait_url_dark | relative_url }}";
-            profileSourceDark.srcset = "{{ site.data.profile.portrait_url_dark | relative_url }}";
+        var lightModeImg = "{{ site.data.profile.portrait_url_light | relative_url }}";
+        var darkModeImg = "{{ site.data.profile.portrait_url_dark | relative_url }}";
+
+        if (localStorage.getItem("dark-mode") === "enabled") {
+            body.classList.add("dark-mode");
+            profileImg.src = darkModeImg;
+            profileSourceDark.srcset = darkModeImg;
             profileSourceLight.srcset = "";
         } else {
-            profileImg.src = "{{ site.data.profile.portrait_url_light | relative_url }}";
-            profileSourceLight.srcset = "{{ site.data.profile.portrait_url_light | relative_url }}";
+            body.classList.remove("dark-mode");
+            profileImg.src = lightModeImg;
+            profileSourceLight.srcset = lightModeImg;
             profileSourceDark.srcset = "";
         }
     }
 
-    // Apply stored dark mode setting on page load
-    if (localStorage.getItem("dark-mode") === "enabled") {
-        body.classList.add("dark-mode");
-        toggleButton.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
-        updateProfilePicture();
+    // ✅ Ensure Light Mode is Default on First Load
+    if (!localStorage.getItem("dark-mode")) {
+        localStorage.setItem("dark-mode", "disabled"); // Forces light mode on first visit
     }
+
+    updateProfilePicture(); // ✅ Ensures correct profile image on page load
 
     // Toggle dark mode on button click
     toggleButton.addEventListener("click", function() {
@@ -64,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Detect system theme change and update picture
     window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateProfilePicture);
 });
+
 </script>
 
 

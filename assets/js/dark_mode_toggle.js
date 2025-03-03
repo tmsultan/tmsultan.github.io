@@ -12,6 +12,8 @@ function attachDarkModeToggle() {
 
         toggleButton.addEventListener("click", function () {
             document.body.classList.toggle("dark-mode");
+
+            // Store user preference in localStorage
             localStorage.setItem("dark-mode", document.body.classList.contains("dark-mode") ? "enabled" : "disabled");
 
             updateToggleButtonText();
@@ -20,7 +22,12 @@ function attachDarkModeToggle() {
         });
     }
 
-    // Apply stored dark mode setting on page load
+    // ✅ Force light mode on first load if no preference is stored
+    if (!localStorage.getItem("dark-mode")) {
+        localStorage.setItem("dark-mode", "disabled"); // Ensure first-time users start in light mode
+    }
+
+    // Apply stored dark mode setting
     if (localStorage.getItem("dark-mode") === "enabled") {
         document.body.classList.add("dark-mode");
     } else {
@@ -28,7 +35,7 @@ function attachDarkModeToggle() {
     }
 
     updateToggleButtonText();
-    updateProfilePicture();
+    updateProfilePicture(); // ✅ Ensure correct image is set immediately
 }
 
 function updateToggleButtonText() {
@@ -44,12 +51,29 @@ function updateToggleButtonText() {
 function updateProfilePicture() {
     var profileImg = document.getElementById("profile-img");
     if (!profileImg) return;
-    if (document.body.classList.contains("dark-mode")) {
-        profileImg.src = "/assets/images/photos/Portrait_NightMode.jpg";
+
+    // Read from profile.yml
+    var lightModeImg = "{{ site.data.profile.portrait_url_light | relative_url }}";
+    var darkModeImg = "{{ site.data.profile.portrait_url_dark | relative_url }}";
+
+
+    // Check localStorage or system preference
+    if (document.body.classList.contains("dark-mode") || localStorage.getItem("dark-mode") === "enabled") {
+        profileImg.src = darkModeImg;
     } else {
-        profileImg.src = "/assets/images/photos/portrait.jpg";
+        profileImg.src = lightModeImg;
+
     }
 }
+
+
+
+// Ensure the correct profile picture is set on page load
+//document.addEventListener("DOMContentLoaded", function () {
+//    attachDarkModeToggle();
+//    updateProfilePicture(); // Fix initial image loading issue
+// });
+
 
 //document.addEventListener("DOMContentLoaded", function () {
 //    attachDarkModeToggle();
