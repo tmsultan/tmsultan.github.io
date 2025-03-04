@@ -22,7 +22,10 @@ orcid: 0000-0002-8372-2855
 short_bio_text_justify: false
 short_bio: >-
   <p>
-  Computational Imaging and Signal Processing Researcher with expertise in mixed-signal processing, AI-driven time-series analysis, and hardware-software co-design. Strong background in developing signal processing algorithms for 3D sensing with SPAD & CMOS sensors. Proficient in rapid prototyping, system-level modeling, and high-performance algorithm development in Python, MATLAB, C++, and ONNX. Strong foundation in optics, rendering, and camera systems, with a drive for continuous learning, teamwork, teaching, and innovation.
+  I am completing my PhD in Electrical and Computer Engineering at UW–Madison in the  <a href = "https://biostat.wisc.edu/~compoptics/"> Computational Optics Lab </a>, where I am fortunate to be advised by <a href = "https://biostat.wisc.edu/~velten/"> Andreas Velten </a>. Our research focuses on developing next-generation imaging systems by integrating novel sensor technologies (SPAD, CMOS, PMT) with advanced signal processing and deep learning reconstruction algorithms for a wide range of applications including 3D imaging, non-line-of-sight imaging, and microscopy.
+  </p>
+  <p>
+  With a strong background in optics, sensor technologies, and imaging pipelines, I specialize in building optical hardware setups, integrating SPAD, CMOS, and PMT sensors, and developing computational methods for imaging and sensing. I am passionate about advancing high-performance sensing solutions and am seeking opportunities in optics and sensor development to drive innovations in imaging, vision systems, or next-generation display technologies.
   </p>
 
 # portrait_url:       "/assets/images/photos/Portrait_NightMode.jpg"

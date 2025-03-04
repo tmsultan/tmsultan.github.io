@@ -212,6 +212,23 @@ img.lazy, div.lazy {
     color: #ffffff !important; /* Ensure max contrast */
 }
 
+/* Default (Light Mode) */
+.navbar-toggler {
+    color: black; /* Default color */
+    border-color: black; /* Ensures border visibility */
+}
+
+/* Dark Mode */
+.dark-mode .navbar-toggler {
+    color: white !important; /* Makes icon white */
+    border-color: white !important; /* Makes border white */
+}
+
+/* If using Font Awesome icons */
+.dark-mode .navbar-toggler i {
+    color: white !important; /* Ensures the icon changes color */
+}
+
 
 .dark-mode a {
     color: #bb86fc !important; /* Restores purple links */
@@ -383,11 +400,20 @@ body.dark-mode #clustrmaps-dark {
 
 /* Default Light Mode */
 #profile-img {
-    height: 300px !important;
+    height: 300px !important; /* Adjust as needed */
     width: auto;
+    border-radius: 50%; /* Optional: Makes it circular */
 }
 
 /* Debugging: Ensure Dark Mode CSS Applies */
 .dark-mode #profile-img {
-    height: 200px !important;
+    height: 250px !important;
+}
+
+/* Centers the profile image within its column */
+.col-md-4 {
+    display: flex;
+    flex-direction: column; /* Keeps elements stacked */
+    align-items: center; /* Centers the image horizontally */
+    justify-content: center; /* Centers content vertically */
 }
