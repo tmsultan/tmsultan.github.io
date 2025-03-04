@@ -18,5 +18,5 @@ authors:
 links:
   Paper: https://doi.org/10.1364/OE.508034
   Code: https://github.com/tmsultan/2023_NLOS_Light_Transport_TFSWD
-  BibTex: http://127.0.0.1:4000/academic-homepage/bibtex/sultanMoreAccurateLight2024/
+  BibTex: http://tmsultan.github.io/bibtex/sultanMoreAccurateLight2024/
 ---

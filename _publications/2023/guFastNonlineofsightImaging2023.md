@@ -16,5 +16,5 @@ authors:
 links:
   Paper: https://ieeexplore.ieee.org/abstract/document/10233262
   Code:  https://github.com/ArianaGu/3D-RSD
-  BibTex: http://127.0.0.1:4000/academic-homepage/bibtex/guFastNonlineofsightImaging2023/
+  BibTex: http://tmsultan.github.io/bibtex/guFastNonlineofsightImaging2023/
 ---
