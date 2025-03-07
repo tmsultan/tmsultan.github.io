@@ -46,7 +46,7 @@ For our experiment, we set up a glass spiral, borrowed from the UW Madison Physi
   <img src="{{site.baseurl}}/assets/images/Misc_Pages/Glass_Tube_1.png"
    style="width: 60%; max-width: 1000px; height: auto;">
   <p align="center">
-  <em> Fig. 2: Our experimental setup for capturing our dataset [1] </em>
+  <em> Fig. 3: Test Scene with Archimedean Glass Spiral [1] </em>
   </p>
 </p>
 
@@ -57,7 +57,7 @@ We use a galvo mirror to direct the laser beam onto one end of the glass tube. W
   <img src="{{site.baseurl}}/assets/images/Misc_Pages/output.gif"
    style="width: 40%; max-width: 1000px; height: auto;">
   <p align="center">
-  <em> Fig. 2: Light in flight video for the glass tube </em>
+  <em> Fig. 4: Light in flight video for the glass tube </em>
   </p>
 </p>
 
