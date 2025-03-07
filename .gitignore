@@ -7,4 +7,7 @@ _site/
 vendor/
 Gemfile.lock
 
+/assets/images/Misc_Pages/Arxiv/
+
 .DS_Store
+*.png
