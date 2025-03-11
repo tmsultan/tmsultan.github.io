@@ -1,8 +1,9 @@
 ---
-layout:  default
-title:   "Light in Flight"
-permalink: /LiF/
-date: 2024-04-17 00:01:00 +0800
+layout: post
+title: "My First Blog Post"
+date: 2025-03-08
+permalink: /LiF1/
+authors: ["Talha Sultan", "John Doe"]
 ---
 
 # Light in Flight
