@@ -1,0 +1,7 @@
+@book{sultan2025advancing,
+  title={Advancing Non-line-of-sight Imaging with Next-generation Single-photon Avalanche Diode Arrays},
+  author={Sultan, T.},
+  url={https://books.google.com/books?id=nrPi0QEACAAJ},
+  year={2025},
+  publisher={ProQuest LLC}
+}

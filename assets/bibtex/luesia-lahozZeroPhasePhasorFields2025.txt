@@ -1,0 +1,14 @@
+@inproceedings{luesia-lahozZeroPhasePhasorFields2025,
+  title = {Zero-{{Phase Phasor Fields}} for {{Non-Line-of-Sight Imaging}}},
+  booktitle = {2025 {{IEEE International Conference}} on {{Computational Photography}} ({{ICCP}})},
+  author = {{Luesia-Lahoz}, Pablo and Sultan, Talha and Peterson, Forrest B. and Velten, Andreas and Gutierrez, Diego and Mu{\~n}oz, Adolfo},
+  year = 2025,
+  month = jul,
+  pages = {1--9},
+  issn = {2472-7636},
+  doi = {10.1109/ICCP64821.2025.11143850},
+  urldate = {2026-02-26},
+  abstract = {Non-line-of-sight imaging employs ultra-fast illumination and sensing devices to reconstruct scenes outside their line of sight by analyzing the temporal profile of indirect scattered illumination on a secondary relay surface. Commonly, the NLOS methods transform the temporal domain into the frequency domain and operate on it, and then identify surface locations by locating the maxima in amplitude along the reconstruction volume. Phase information, which is virtual as it results from a Fourier transform, is very often discarded or ignored. We incorporate phase information into our novel Zero-Phase Phasor Fields imaging technique, which we derive for a confocal capture configuration. We show how, at positions that belong to the hidden geometry, we can ensure the phase is zero, so we can locate the hidden geometry with great precision by locating the zero crossings in the phase. This allows us to reconstruct at widely spaced locations and still achieve up to 125 micrometer depth precision, as our experimental validation shows with both synthetic and captured data, the latter publicly available. Moreover, the phase is robust to noise, as we demonstrate with decreasing signal-to-noise ratio using publicly available dataset captures of the same scene.},
+  keywords = {Computational Photography,Geometry,Image reconstruction,Lighting,looking around corners,Non-line-of-sight imaging,Nonlinear optics,Optical surface waves,Photography,Relays,Sensors,Signal to noise ratio,Surface reconstruction,virtual wave optics},
+  file = {C:\Users\Talha\Zotero\storage\E93X46RK\Luesia-Lahoz et al. - 2025 - Zero-Phase Phasor Fields for Non-Line-of-Sight Imaging.pdf}
+}
